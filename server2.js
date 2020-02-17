@@ -40,6 +40,21 @@ mongoose.connect(dbConfig.prodUrl, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
+//new for cloud
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://admin:admin0987@testdata-5fksd.mongodb.net/test?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// }).then(() => {
+//       console.log("Successfully connected to the database");    
+//   }).catch(err => {
+//       console.log('Could not connect to the database. Exiting now...', err);
+//       process.exit();
+//   });;
+////////////////////////////
 
 // define a simple route
 app.get('/api/', (req, res) => {
