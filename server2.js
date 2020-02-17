@@ -5,6 +5,7 @@ var cors = require('cors');
 
 // create express app
 const app = express();
+var port_number = server.listen(process.env.PORT || 3000);
 
 var whitelist = ['http://localhost:5300','http://localhost:3000']
 var corsOptions = {
@@ -93,6 +94,6 @@ require('./app/routes/log.routes.js')(app);
 
 
 // listen for requests
-app.listen(3400, () => {
+app.listen(port_number, () => {
     console.log("Server is listening on port 3400");
 });
